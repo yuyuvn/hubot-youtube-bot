@@ -9,15 +9,19 @@
   "description": "A bot that can't do anything",
   "dependencies": {
     "coffee-script": "1.10.0",
+    "cron": "^1.1.0",
     "dotenv": "2.0.0",
     "hubot": "~2.13.2",
-    "hubot-youtube-live": "yuyuvn/hubot-youtube-live",
     "hubot-heroku-keepalive": "yuyuvn/hubot-heroku-keepalive",
     "hubot-mock-adapter": "~1.0.0",
+    "hubot-youtube-live": "yuyuvn/hubot-youtube-live",
     "orchestrate-brain": "0.0.5",
     "should": "~8.3.0"
   },
   "engines": {
     "node": "5.8.x"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
   }
 }

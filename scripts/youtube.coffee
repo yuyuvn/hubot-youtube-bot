@@ -9,6 +9,7 @@
 #
 # Author:
 #   clicia scarlet <yuyuvn@icloud.com>
+CronJob = require('cron').CronJob
 
 module.exports = (robot) ->
   replied = []
@@ -17,3 +18,7 @@ module.exports = (robot) ->
     replied.push msg.envelope.user.id
     message = robot.brain.data.youtube?.message
     msg.reply message if message?
+
+  new CronJob "* * 7 * * *", () ->
+    replied = []
+  , null, true, "Asia/Bangkok"
