@@ -9,7 +9,7 @@
 #
 # Author:
 #   clicia scarlet <yuyuvn@icloud.com>
-CronJob = require('cron').CronJob
+CronJob = require('hubot-cronjob')
 
 module.exports = (robot) ->
   replied = []
@@ -19,6 +19,4 @@ module.exports = (robot) ->
     message = robot.brain.data.youtube?.message
     msg.reply message if message?
 
-  new CronJob "* * 7 * * *", () ->
-    replied = []
-  , null, true, "Asia/Bangkok"
+  new CronJob "* * 7 * * *", "Asia/Bangkok", () -> replied = []
